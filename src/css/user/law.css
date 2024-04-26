@@ -1,0 +1,20 @@
+.law-item__header {
+    font-size: var(--font-xl);
+}
+
+.law-item>*:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.law-item__sub-header {
+    font-weight: bold;
+    font-size: var(--font-lg);
+}
+
+.law-item__content>*:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.law-item__body {
+    line-height: var(--line-height-mult);
+}

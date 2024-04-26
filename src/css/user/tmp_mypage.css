@@ -1,0 +1,49 @@
+/*
+== tmp my page ==
+main main_tmp-user
+main__header
+main__content
+  tmp-user
+      tmp-user__item
+        tmp-user__item-header
+        tmp-user__item-status
+        tmp-user__btn-wrapper
+          tmp-user__button
+*/
+.main_tmp-user {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.tmp-user__section>*:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.tmp-user__item>*:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+
+.tmp-user__item-header {
+    font-size: var(--font-lg);
+    font-weight: bold;
+}
+
+.tmp-user__btn-wrapper {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.tmp-user__button {
+    flex: 1;
+}
+
+@media screen and (max-width: 888px) {
+    .main_tmp-user {
+        width: 100%;
+    }
+
+    .tmp-user__btn-wrapper {
+        flex-direction: column;
+    }
+}

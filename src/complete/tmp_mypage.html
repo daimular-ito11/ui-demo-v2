@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui-demo-v2</title>
+    <script type="module" src="../js/index.js" defer></script>
+</head>
+
+<body>
+    <header class="header header_form">
+        <div class="main-header">
+            <a href="/" class="main-header__brand">
+                <img src="images/logo.png" alt="logo" class="main-header__logo">
+            </a>
+        </div>
+        <div class="sub-header">
+            <a href="/" class="sub-header__brand">
+                <img src="images/logo.png" alt="logo" class="sub-header__logo">
+            </a>
+        </div>
+        <div class="sub-header">
+            <button class="sub-header__back"></button>
+            <h1 class="sub-header__text">仮会員登録</h1>
+        </div>
+    </header>
+
+    <main class="main main_tmp-user">
+        <h1 class="main__header">仮会員マイページ</h1>
+        <div class="tmp-user__section">
+            <p class="description">
+                投資を始めるためには本会員登録が必要です。<br>
+                以下の手順に従って本会員登録を行ってください。
+            </p>
+            <div class="tmp-user__item">
+                <h2 class="tmp-user__item-header">①メール認証</h2>
+                <div class="tmp-user__item-status">ステータス：<span>未認証</span></div>
+                <!--/* メール未認証 */-->
+                <!-- <a th:if="${siteClient.record[41]?.id eq 1}" th:href="${pages['p047168']?.path ?:'/404'}" class="button button_width_full">
+                    認証メールを送信する
+                </a> -->
+                <!--/* メール認証済み */-->
+                <span th:unless="${siteClient.record[41]?.id eq 1}" class="button button_width_full button_disabled">
+                    認証メールを送信する
+                </span>
+                <span class="description description_color_gray">
+                    メールアドレスを変更したい場合は、お手数ですが会員登録からやり直してください。
+                </span>
+            </div>
+            <div class="tmp-user__item">
+                <h2 class="tmp-user__item-header">②会員情報を登録</h2>
+                <div class="tmp-user__item-status">ステータス：<span>未認証</span></div>
+                <th:block th:if="${siteClient.record[41]?.id eq 2}">
+                    <!--/* メール認証済み & 会員ステータスが本人確認中ではない */-->
+                    <a th:if="${siteClient.record[29]?.id ne 4}" th:href="${pages['p047168']?.path ?:'/404'}" class="button button_width_full">
+                        会員情報を登録する
+                    </a>
+                    <!--/* メール認証済み & 会員ステータスが本人確認中 */-->
+                    <!-- <a th:if="${siteClient.record[29]?.id eq 4}" th:href="${pages['p047168']?.path ?:'/404'}" class="button button_width_full">
+                        会員情報を修正する
+                    </a> -->
+                </th:block>
+
+                <!--/* メール未認証 */-->
+                <!-- <th:block th:if="${siteClient.record[41]?.id eq 1}">
+                    <span th:href="${pages['p047168']?.path ?:'/404'}" class="button button_width_full button_disabled">
+                        会員情報を修正する
+                    </span>
+                </th:block> -->
+            </div>
+            <div class="tmp-user__item">
+                <h2 class="tmp-user__item-header">③本人確認</h2>
+                <div class="tmp-user__item-status">ステータス：<span>未認証</span></div>
+                <!--/* メール認証済み & 会員ステータスが本人確認中 */-->
+                <div th:if="${siteClient.record[29]?.id eq 4 AND siteClient.record[41]?.id eq 2}" class="tmp-user__btn-wrapper">
+                    <a class="button button_width_full tmp-user__button">スマートフォンで本人確認</a>
+                    <a class="button button_width_full tmp-user__button">画像をアップロードして本人確認</a>
+                </div>
+                <!--/* メール認証済み & 会員ステータスが本人確認中ではない */-->
+                <!-- <div th:if="${siteClient.record[29]?.id ne 4 AND siteClient.record[41]?.id eq 2}" class="tmp-user__btn-wrapper">
+                    <span class="button button_width_full button_disabled tmp-user__button">スマートフォンで本人確認</span>
+                    <span class="button button_width_full button_disabled tmp-user__button">画像をアップロードして本人確認</span>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <section class="footer__section">
+                <h3 class="footer__section-header">運営会社</h3>
+                <div class="footer__list footer__list_dl">
+                    <dl class="footer__dl">
+                        <dt>会社名：</dt>
+                        <dd>株式会社○○</dd>
+                    </dl>
+                    <dl class="footer__dl">
+                        <dt>所在地：</dt>
+                        <dd>東京都○○区○○</dd>
+                    </dl>
+                    <dl class="footer__dl">
+                        <dt>代表者：</dt>
+                        <dd>代表取締役 大村 太郎</dd>
+                    </dl>
+                    <dl class="footer__dl">
+                        <dt>業務管理者：</dt>
+                        <dd>大村 太郎</dd>
+                    </dl>
+                    <dl class="footer__dl">
+                        <dt>免許：</dt>
+                        <dd>不動産特定共同事業許可 第一号業者 ○○県知事 第〇号</dd>
+                    </dl>
+                </div>
+                <div class="footer__section-description">
+                    <p class="footer__description">※弊社のクラウドファンディングは電子取引業務を行います。</p>
+                    <p class="footer__description">※サイトに表示される「利回り」とは、予想利回りであり確定したものではありません。</p>
+                    <p class="footer__description">※利回り及び元金の保証は出資法の制限により行っておりません。</p>
+                </div>
+            </section>
+            <section class="footer__section">
+                <h3 class="footer__section-header">サイトマップ</h3>
+                <ul class="footer__list footer__list_ul">
+                    <li><a class="footer__link" href="">ホーム</a></li>
+                    <li><a class="footer__link" href="">ファンド</a></li>
+                    <li><a class="footer__link" href="">申込一覧</a></li>
+                    <li><a class="footer__link" href="">配当履歴</a></li>
+                    <li><a class="footer__link" href="">メニュー</a></li>
+                    <li><a class="footer__link" href="">税務書類</a></li>
+                    <li><a class="footer__link" href="">会員情報</a></li>
+                    <li><a class="footer__link" href="">ニュース</a></li>
+                    <li><a class="footer__link" href="">お問い合わせ</a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3 class="footer__section-header">法的表示</h3>
+                <ul class="footer__list footer__list_ul">
+                    <li><a class="footer__link" href="">個人情報保護方針</a></li>
+                    <li><a class="footer__link" href="">反社会的勢力排除条項</a></li>
+                    <li><a class="footer__link" href="">電子情報処理組織の管理を十分に行うための基本方針</a></li>
+                    <li><a class="footer__link" href="">重要書類の電子交付に関する承諾</a></li>
+                    <li><a class="footer__link" href="">主なリスクについて</a></li>
+                    <li><a class="footer__link" href="">クーリングオフについて</a></li>
+                    <li><a class="footer__link" href="">業務管理者名簿</a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="footer__rights">© 2024- BLITZ CFS ver.3. All rights reserved.</div>
+    </footer>
+</body>
+
+</html>
