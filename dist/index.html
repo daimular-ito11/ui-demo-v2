@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui-demo-v2</title>
+  <script type="module" crossorigin src="/main.js"></script>
+  <link rel="stylesheet" crossorigin href="/style.css">
+</head>
+
+<body style="min-height: 500vh;">
+    <header class="header header_auth">
+        <div class="main-header">
+            <a href="/" class="main-header__brand">
+                <img src="images/logo.png" alt="logo" class="main-header__logo">
+            </a>
+            <ul class="main-header__link-list main-header__link-list_icon">
+                <li class="main-header__link-item main-header__link-item_active">
+                    <a href="" class="link-icon link-icon_col">
+                        <span class="material-symbols-outlined link-icon__icon">home</span>
+                        <span class="link-icon__text">ホーム</span>
+                    </a>
+                </li>
+                <li class="main-header__link-item">
+                    <a href="" class="link-icon link-icon_col">
+                        <span class="material-symbols-outlined link-icon__icon">apartment</span>
+                        <span class="link-icon__text">ファンド</span>
+                    </a>
+                </li>
+                <li class="main-header__link-item">
+                    <a href="" class="link-icon link-icon_col">
+                        <span class="material-symbols-outlined link-icon__icon">pending_actions</span>
+                        <span class="link-icon__text">出資履歴</span>
+                    </a>
+                </li>
+                <li class="main-header__link-item">
+                    <a href="" class="link-icon link-icon_col">
+                        <span class="material-symbols-outlined link-icon__icon">payments</span>
+                        <span class="link-icon__text">配当履歴</span>
+                    </a>
+                </li>
+                <li class="main-header__link-item">
+                    <a href="" class="link-icon link-icon_col">
+                        <span class="material-symbols-outlined link-icon__icon">menu</span>
+                        <span class="link-icon__text">メニュー</span>
+                    </a>
+                </li>
+            </ul>
+            <a class="main-header__auth">
+                john smith
+            </a>
+        </div>
+        <div class="sub-header sub-header_type_menu">
+            <a href="/" class="sub-header__brand">
+                <img src="images/logo.png" alt="logo" class="sub-header__logo">
+            </a>
+            <button class="sub-header__toggler" data-role="drawer" data-target="#js-header-drawer"></button>
+            <div class="sub-header__drawer drawer" id="js-header-drawer" data-role="drawer" data-target="#js-header-drawer">
+                <div class="drawer__dialog drawer__dialog_header">
+                    <div class="drawer__header">
+                        <a href="http://localhost:5173/" class="drawer__brand">
+                            <img src="images/logo.png" alt="logo" class="sub-header__logo">
+                        </a>
+                    </div>
+                    <div class="drawer__content">
+                        <ul class="sub-header__btn-list">
+                            <li class="drop-down" id="js-sub_head_1">
+                                <button type="button" class="drop-down__btn" data-role="drop-down" data-target="#js-sub_head_1">
+                                    ファンド一覧
+                                </button>
+                                <div class="drop-down__content">
+                                    <ul class="drop-down__list">
+                                        <li class="drop-down__list-item"><a href="">ファンド</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="drop-down" id="js-sub_head_2">
+                                <button type="button" class="drop-down__btn" data-role="drop-down" data-target="#js-sub_head_2">
+                                    お知らせ
+                                </button>
+                                <div class="drop-down__content">
+                                    <ul class="drop-down__list">
+                                        <li class="drop-down__list-item"><a href="">お知らせ</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="drawer__footer">
+                        <span class="sub-header__user">example@example.com</span>
+                        <button class="button button_width_full button_size_sm" data-role="modal" data-target="#js-logout-modal">
+                            ログアウト
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-header">
+            <button class="sub-header__back"></button>
+            <!-- <h1 class="sub-header__text">Top Page</h1> -->
+            <h1 class="sub-header__text">タイトル</h1>
+        </div>
+    </header>
+
+    <header class="header header_guest">
+        <div class="main-header">
+            <a href="/" class="main-header__brand">
+                <img src="images/logo.png" alt="logo" class="main-header__logo">
+            </a>
+            <ul class="main-header__link-list">
+                <li class="main-header__link-item main-header__link-item_active">
+                    <a class="link-item__text" href="">ファンド一覧</a>
+                </li>
+                <li class="main-header__link-item">
+                    <a class="link-item__text" href="">お知らせ</a>
+                </li>
+                <li class="main-header__link-item">
+                    <a class="link-item__text" href="">ご利用の流れ</a>
+                </li>
+                <li class="main-header__link-item">
+                    <a class="link-item__text" href="">よくある質問</a>
+                </li>
+                <li class="main-header__link-item">
+                    <a class="link-item__text" href="">ファンド紹介</a>
+                </li>
+            </ul>
+            <div class="main-header__btn">
+                <button class="button button_size_sm button_type_line">ログイン</button>
+                <button class="button button_size_sm">会員登録</button>
+            </div>
+        </div>
+        <div class="sub-header">
+            <a href="/" class="sub-header__brand">
+                <img src="images/logo.png" alt="logo" class="sub-header__logo">
+            </a>
+        </div>
+    </header>
+
+    <header class="header header_guest">
+        <div class="main-header">
+            <a href="/" class="main-header__brand">
+                <img src="images/logo.png" alt="logo" class="main-header__logo">
+            </a>
+            <ul class="main-header__link-list">
+                <li class="main-header__link-item main-header__link-item_active">
+                    <a class="link-item__text" href="">ファンド一覧</a>
+                </li>
+                <li class="main-header__link-item">
+                    <a class="link-item__text" href="">お知らせ</a>
+                </li>
+                <li class="main-header__link-item">
+                    <a class="link-item__text" href="">ご利用の流れ</a>
+                </li>
+                <li class="main-header__link-item">
+                    <a class="link-item__text" href="">よくある質問</a>
+                </li>
+                <li class="main-header__link-item">
+                    <a class="link-item__text" href="">ファンド紹介</a>
+                </li>
+            </ul>
+            <div class="main-header__btn">
+                <button class="button button_size_sm button_type_line">
+                    <span class="material-symbols-outlined">logout</span>
+                    ログアウト
+                </button>
+            </div>
+        </div>
+        <div class="sub-header">
+            <a href="/" class="sub-header__brand">
+                <img src="images/logo.png" alt="logo" class="sub-header__logo">
+            </a>
+        </div>
+    </header>
+
+    <header class="header header_form">
+        <div class="main-header">
+            <a href="/" class="main-header__brand">
+                <img src="images/logo.png" alt="logo" class="main-header__logo">
+            </a>
+        </div>
+        <div class="sub-header">
+            <a href="/" class="sub-header__brand">
+                <img src="images/logo.png" alt="logo" class="sub-header__logo">
+            </a>
+        </div>
+    </header>
+
+    <div class="sub-header sub-header_type_border">
+        <a href="/" class="sub-header__brand">
+            <img src="images/logo.png" alt="logo" class="sub-header__logo">
+        </a>
+    </div>
+    <header class="header header_step">
+        <div class="main-header">
+            <a href="/" class="main-header__brand main-header__brand_left">
+                <img src="images/logo.png" alt="logo" class="main-header__logo">
+            </a>
+            <div class="main-header__step">
+                <div class="step-circle__outer step-circle__outer_step-1">
+                    <div class="step-circle__inner">
+                        <div class="step-circle__text"><span class="step-circle__text_current">1</span>/4</div>
+                    </div>
+                </div>
+                <h1 class="main-header__text">基本情報の登録</h1>
+            </div>
+
+        </div>
+        <div class="sub-header">
+            <button class="sub-header__back"></button>
+            <!-- <h1 class="sub-header__text">Top Page</h1> -->
+            <h1 class="sub-header__text">タイトル</h1>
+        </div>
+        <div class="sub-header sub-header_type_step">
+            <div class="sub-header__step">
+                <div class="step-circle__outer step-circle__outer_step-1">
+                    <div class="step-circle__inner">
+                        <div class="step-circle__text"><span class="step-circle__text_current">1</span>/4</div>
+                    </div>
+                </div>
+                <h1 class="sub-header__text">基本情報の登録</h1>
+            </div>
+        </div>
+    </header>
+
+    <!--
+    <header class="header header_admin">
+        <div class="main-header">
+            <a href="/" class="main-header__brand">
+                <img src="images/logo.png" alt="logo" class="main-header__logo">
+            </a>
+        </div>
+        <div class="sub-header">
+            <a href="/" class="sub-header__brand">
+                <img src="images/logo.png" alt="logo" class="sub-header__logo">
+            </a>
+        </div>
+    </header>
+    -->
+</body>
+
+</html>
