@@ -10,173 +10,6 @@
 </head>
 
 <body>
-    <!-- auth header -->
-    <header class="header header_auth">
-        <div class="main-header">
-            <a href="/" class="main-header__brand">
-                <img src="images/logo.png" alt="logo" class="main-header__logo">
-            </a>
-            <ul class="main-header__link-list main-header__link-list_icon">
-                <li class="main-header__link-item main-header__link-item_active">
-                    <a href="" class="link-icon link-icon_col">
-                        <span class="material-symbols-outlined link-icon__icon">home</span>
-                        <span class="link-icon__text">ホーム</span>
-                    </a>
-                </li>
-                <li class="main-header__link-item">
-                    <a href="" class="link-icon link-icon_col">
-                        <span class="material-symbols-outlined link-icon__icon">apartment</span>
-                        <span class="link-icon__text">ファンド</span>
-                    </a>
-                </li>
-                <li class="main-header__link-item">
-                    <a href="" class="link-icon link-icon_col">
-                        <span class="material-symbols-outlined link-icon__icon">pending_actions</span>
-                        <span class="link-icon__text">出資履歴</span>
-                    </a>
-                </li>
-                <li class="main-header__link-item">
-                    <a href="" class="link-icon link-icon_col">
-                        <span class="material-symbols-outlined link-icon__icon">payments</span>
-                        <span class="link-icon__text">配当履歴</span>
-                    </a>
-                </li>
-                <li class="main-header__link-item">
-                    <a href="" class="link-icon link-icon_col">
-                        <span class="material-symbols-outlined link-icon__icon">menu</span>
-                        <span class="link-icon__text">メニュー</span>
-                    </a>
-                </li>
-            </ul>
-            <a class="main-header__auth">
-                john smith
-            </a>
-        </div>
-        <div class="sub-header sub-header_type_menu">
-            <a href="/" class="sub-header__brand">
-                <img src="images/logo.png" alt="logo" class="sub-header__logo">
-            </a>
-            <button class="sub-header__toggler" data-role="drawer" data-target="#js-header-drawer"></button>
-            <div class="sub-header__drawer drawer" id="js-header-drawer" data-role="drawer" data-target="#js-header-drawer">
-                <div class="drawer__dialog drawer__dialog_header">
-                    <div class="drawer__header">
-                        <a href="http://localhost:5173/" class="drawer__brand">
-                            <img src="images/logo.png" alt="logo" class="sub-header__logo">
-                        </a>
-                    </div>
-                    <div class="drawer__content">
-                        <ul class="sub-header__btn-list">
-                            <li class="drop-down" id="js-sub_head_1">
-                                <button type="button" class="drop-down__btn" data-role="drop-down" data-target="#js-sub_head_1">
-                                    ファンド一覧
-                                </button>
-                                <div class="drop-down__content">
-                                    <ul class="drop-down__list">
-                                        <li class="drop-down__list-item"><a href="">ファンド</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="drop-down" id="js-sub_head_2">
-                                <button type="button" class="drop-down__btn" data-role="drop-down" data-target="#js-sub_head_2">
-                                    お知らせ
-                                </button>
-                                <div class="drop-down__content">
-                                    <ul class="drop-down__list">
-                                        <li class="drop-down__list-item"><a href="">お知らせ</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="drawer__footer">
-                        <span class="sub-header__user">example@example.com</span>
-                        <button class="button button_width_full button_size_sm" data-role="modal" data-target="#js-logout-modal">
-                            ログアウト
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sub-header">
-            <button class="sub-header__back"></button>
-            <!-- <h1 class="sub-header__text">Top Page</h1> -->
-            <h1 class="sub-header__text">タイトル</h1>
-        </div>
-    </header>
-
-    <!-- guest header -->
-    <header class="header header_guest">
-        <div class="main-header">
-            <a href="/" class="main-header__brand">
-                <img src="images/logo.png" alt="logo" class="main-header__logo">
-            </a>
-            <ul class="main-header__link-list">
-                <li class="main-header__link-item main-header__link-item_active">
-                    <a class="link-item__text" href="">ファンド一覧</a>
-                </li>
-                <li class="main-header__link-item">
-                    <a class="link-item__text" href="">お知らせ</a>
-                </li>
-                <li class="main-header__link-item">
-                    <a class="link-item__text" href="">ご利用の流れ</a>
-                </li>
-                <li class="main-header__link-item">
-                    <a class="link-item__text" href="">よくある質問</a>
-                </li>
-                <li class="main-header__link-item">
-                    <a class="link-item__text" href="">ファンド紹介</a>
-                </li>
-            </ul>
-            <div class="main-header__btn">
-                <button class="button button_size_sm button_type_line">ログイン</button>
-                <button class="button button_size_sm">会員登録</button>
-            </div>
-        </div>
-        <div class="sub-header">
-            <a href="/" class="sub-header__brand">
-                <img src="images/logo.png" alt="logo" class="sub-header__logo">
-            </a>
-        </div>
-    </header>
-
-    <!-- guest logined header -->
-    <header class="header header_guest">
-        <div class="main-header">
-            <a href="/" class="main-header__brand">
-                <img src="images/logo.png" alt="logo" class="main-header__logo">
-            </a>
-            <ul class="main-header__link-list">
-                <li class="main-header__link-item main-header__link-item_active">
-                    <a class="link-item__text" href="">ファンド一覧</a>
-                </li>
-                <li class="main-header__link-item">
-                    <a class="link-item__text" href="">お知らせ</a>
-                </li>
-                <li class="main-header__link-item">
-                    <a class="link-item__text" href="">ご利用の流れ</a>
-                </li>
-                <li class="main-header__link-item">
-                    <a class="link-item__text" href="">よくある質問</a>
-                </li>
-                <li class="main-header__link-item">
-                    <a class="link-item__text" href="">ファンド紹介</a>
-                </li>
-            </ul>
-            <div class="main-header__btn">
-                <button class="button button_size_sm button_type_line">
-                    <span class="material-symbols-outlined">logout</span>
-                    ログアウト
-                </button>
-            </div>
-        </div>
-        <div class="sub-header">
-            <a href="/" class="sub-header__brand">
-                <img src="images/logo.png" alt="logo" class="sub-header__logo">
-            </a>
-        </div>
-    </header>
-
-    <!-- form header -->
     <header class="header header_form">
         <div class="main-header">
             <a href="/" class="main-header__brand">
@@ -188,67 +21,273 @@
                 <img src="images/logo.png" alt="logo" class="sub-header__logo">
             </a>
         </div>
-    </header>
-
-    <!-- step -->
-    <div class="sub-header sub-header_type_border">
-        <a href="/" class="sub-header__brand">
-            <img src="images/logo.png" alt="logo" class="sub-header__logo">
-        </a>
-    </div>
-    <header class="header header_step">
-        <div class="main-header">
-            <a href="/" class="main-header__brand main-header__brand_left">
-                <img src="images/logo.png" alt="logo" class="main-header__logo">
-            </a>
-            <div class="main-header__step">
-                <div class="step-circle__outer step-circle__outer_step-1">
-                    <div class="step-circle__inner">
-                        <div class="step-circle__text"><span class="step-circle__text_current">1</span>/4</div>
-                    </div>
-                </div>
-                <h1 class="main-header__text">基本情報の登録</h1>
-            </div>
-
-        </div>
         <div class="sub-header">
             <button class="sub-header__back"></button>
-            <!-- <h1 class="sub-header__text">Top Page</h1> -->
-            <h1 class="sub-header__text">タイトル</h1>
+            <h1 class="sub-header__text">仮会員登録</h1>
         </div>
-        <div class="sub-header sub-header_type_step">
-            <div class="sub-header__step">
-                <div class="step-circle__outer step-circle__outer_step-1">
-                    <div class="step-circle__inner">
-                        <div class="step-circle__text"><span class="step-circle__text_current">1</span>/4</div>
+    </header>
+
+    <main class="main main_form">
+        <h1 class="main__header main__header_center">仮会員登録</h1>
+        <form action="" class="form">
+            <div class="form__content">
+                <!--/* メールアドレス(email) */-->
+                <div class="input-item">
+                    <sp:input-field name="f02"></sp:input-field>
+                    <label for="email" class="label label_required">
+                        <span class="label__text">メールアドレス</span>
+                        <input type="email" id="email" autocomplete="username" th:name="${fields['f02'].name}" th:value="${inputs['f02']}" placeholder="exmaple@exmaple.com" class="input">
+                    </label>
+                    <!-- <span class="error" th:if="${errors['f02'] != null}" th:text="${errors['f02'].message}">Error message</span> -->
+                </div>
+                <!--/* パスワード(password) */-->
+                <div class="input-item">
+                    <sp:input-field name="f03"></sp:input-field>
+                    <label for="password" class="label label_required label_type_password">
+                        <span class="label__text">パスワード</span>
+                        <input type="password" id="password" th:name="${fields['f03'].name}" th:value="${inputs['f03']}" class="input" autocomplete="new-password">
+                        <span data-target="#password" class="password__toggler"></span>
+                    </label>
+                    <!-- <span class="error" th:if="${errors['f03'] != null}" th:text="${errors['f03'].message}">Error message</span> -->
+                </div>
+                <!--/* 会員種別(customer_type) */-->
+                <div class="input-item input-item_type_radio">
+                    <sp:input-field name="f043"></sp:input-field>
+                    <span class="label label_required">
+                        <span class="label__text">会員種別</span>
+                    </span>
+                    <label class="label label_type_radio" th:each="option : ${fields['f043'].options}" th:for="|user-type-${option.id}|">
+                        <input type="radio" th:name="${fields['f043'].name}" th:value="${option.id}" th:checked="${inputs['f043'] == #strings.toString(option.id)}" th:id="|user-type-${option.id}|" class="input input_type_radio">
+                        <span class="label__text" th:text="${option.label}">label</span>
+                    </label>
+                    <!-- <span class="error" th:if="${errors['f043'] != null}" th:text="${errors['f043'].message}">Error message</span> -->
+                </div>
+                <div class="input-item input-item_no-label">
+                    <sp:agreement></sp:agreement>
+                    <label for="agree_chk_id" class="label label_type_checkbox">
+                        <input type="checkbox" id="agree_chk_id" name="agreement" class="input input_type_checkbox" required>
+                        <span class="label_text">個人情報保護方針に同意する。</span>
+                    </label>
+                    <div class="input-item__link">
+                        <a th:href="${pages['p042080']?.path} ?: '/404'" class="link link_icon">
+                            <span class="link__text">
+                                個人情報保護方針について
+                            </span>
+                            <span class="material-symbols-outlined">
+                                open_in_new
+                            </span>
+                        </a>
                     </div>
                 </div>
-                <h1 class="sub-header__text">基本情報の登録</h1>
+            </div>
+            <div class="form__footer">
+                <button type="submit" name="action" value="next" class="button button_width_full">登録する</button>
+                <span class="form__footer-text">既に会員の方：<a th:href="${pages['p042493']?.path} ?: '/404'" class="link link__text">ログイン</a></span>
+            </div>
+        </form>
+    </main>
+
+    <main class="main main_form main_gray main_paddingx_no">
+        <form action="">
+            <div class="form form_padding_top">
+                <div class="form__content">
+                    <section class="form-section">
+                        <h3 class="form-section__header">プロフィール</h3>
+                        <div class="form-section__group">
+                            <!--/* 苗字(last_name) */-->
+                            <div class="input-item form-section__item">
+                                <sp:input-field name="f04"></sp:input-field>
+                                <label for="first_name" class="label label_required">
+                                    <span class="label__text">苗字</span>
+                                    <input type="text" id="first_name" autocomplete="ser_name" th:name="${fields['f04'].name}" placeholder="例：大村" class="input" th:value="${#maps.containsKey(inputs, 'f04') ? inputs['f04'] : siteClient.record[4]}" required>
+                                </label>
+                                <span class="error" th:text="${errors['f04']?.message}">Error message</span>
+                            </div>
+                            <!--/* 名前(first_name) */-->
+                            <div class="input-item form-section__item">
+                                <sp:input-field name="f05"></sp:input-field>
+                                <label for="last_name" class="label label_required">
+                                    <span class="label__text">名前</span>
+                                    <input type="text" th:name="${fields['f05'].name}" placeholder="例：太郎" th:value="${#maps.containsKey(inputs, 'f05') ? inputs['f05'] : siteClient.record[5]}" id="last_name" autocomplete="given-name" class="input" required>
+                                </label>
+                                <span class="error" th:text="${errors['f05']?.message}">Error message</span>
+                            </div>
+                        </div>
+                        <div class="form-section__group">
+                            <!--/* 苗字（ふりがな）(last_name_reading) */-->
+                            <div class="input-item form-section__item">
+                                <sp:input-field name="f06"></sp:input-field>
+                                <label for="first_name_reading" class="label label_required">
+                                    <span class="label__text">苗字（ふりがな）</span>
+                                    <input type="text" id="first_name_reading" th:name="${fields['f06'].name}" placeholder="例：だいむら" th:value="${#maps.containsKey(inputs, 'f06') ? inputs['f06'] : siteClient.record[6]}" class="input" required>
+                                </label>
+                                <span class="error" th:text="${errors['f06']?.message}">Error message</span>
+                            </div>
+                            <!--/* 名前（ふりがな）(first_name_reading) */-->
+                            <div class="input-item form-section__item">
+                                <sp:input-field name="f07"></sp:input-field>
+                                <label for="last_name_reading" class="label label_required">
+                                    <span class="label__text">名前（ふりがな）</span>
+                                    <input type="text" id="last_name_reading" th:name="${fields['f07'].name}" placeholder="例：たろう" th:value="${#maps.containsKey(inputs, 'f07') ? inputs['f07'] : siteClient.record[7]}" class="input" required>
+                                </label>
+                                <span class="error" th:text="${errors['f07']?.message}">Error message</span>
+                            </div>
+                        </div>
+                        <div class="form-section__group">
+                            <!--/* 生年月日(birthday) */-->
+                            <div class="input-item form-section__item">
+                                <sp:input-field name="f030"></sp:input-field>
+                                <span class="label label_required">
+                                    <span class="label__text">生年月日</span>
+                                    <div class="input-group input-group_flex_end">
+                                        <input type="number" th:name="${fields['f030:year'].name}" placeholder="1990" th:value="${#maps.containsKey(inputs, 'f030:year') ? inputs['f030:year'] : siteClient.record[30]?.year}" class="input">
+                                        <span>年</span>
+                                        <input type="number" th:name="${fields['f030:month'].name}" placeholder="11" th:value="${#maps.containsKey(inputs, 'f030:month') ? inputs['f030:month'] : siteClient.record[30]?.month}" class="input">
+                                        <span>月</span>
+                                        <input type="number" th:name="${fields['f030:day'].name}" placeholder="29" th:value="${#maps.containsKey(inputs, 'f030:day') ? inputs['f030:day'] : siteClient.record[30]?.day}" class="input">
+                                        <span>日</span>
+                                    </div>
+                                </span>
+                                <span class="error" th:if="${errors['f030'] != null}" th:text="${errors['f030'].message}">Error message</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="form-section">
+                        <h3 class="form-section__header">連絡先</h3>
+                        <!--/* 電話番号(phone_number) */-->
+                        <div class="input-item form-section__item">
+                            <sp:input-field name="f08"></sp:input-field>
+                            <label for="tel" class="label label_required">
+                                <span class="label__text">電話番号</span>
+                                <input id="tel" autocomplete="tel" class="input" type="tel" th:name="${fields['f08'].name}" placeholder="012-3456-7890" th:value="${#maps.containsKey(inputs, 'f08') ? inputs['f08'] : siteClient.record[8]?.nationalNumber}" required>
+                            </label>
+                            <span class="error" th:if="${errors['f08'] != null}" th:text="${errors['f08'].message}">Error message</span>
+                        </div>
+                        <!--/* 携帯電話(mobile_phone_number) */-->
+                        <div class="input-item form-section__item">
+                            <sp:input-field name="f09"></sp:input-field>
+                            <label for="phone" class="label label_required">
+                                <span class="label__text">携帯電話</span>
+                                <input id="phone" class="input" type="tel" th:name="${fields['f09'].name}" placeholder="012-3456-7890" th:value="${#maps.containsKey(inputs, 'f09') ? inputs['f09'] : siteClient.record[9]?.nationalNumber}" required>
+                            </label>
+                            <span class="error" th:if="${errors['f09'] != null}" th:text="${errors['f09'].message}">Error message</span>
+                        </div>
+                    </section>
+                    <section class="form-section">
+                        <h3 class="form-section__header">住所</h3>
+                        <!--/* 郵便番号(post_code) */-->
+                        <div class="input-item form-section__item">
+                            <sp:input-field name="f010"></sp:input-field>
+                            <span class="label label_required">
+                                <span class="label__text">郵便番号</span>
+                                <div class="input-group input-group_flex_center">
+                                    <input type="number" class="input">
+                                    <span class="input-group_hyphen"></span>
+                                    <input type="number" class="input">
+
+                                </div>
+                            </span>
+                            <span class="error" th:text="${errors['f010']?.message}">Error message</span>
+                        </div>
+                        <!--/* 都道府県(prefecture) */-->
+                        <div class="input-item form-section__item">
+                            <sp:input-field name="f063"></sp:input-field>
+                            <label for="prefecture" class="label label_required">
+                                <span class="label__text">都道府県</span>
+                                <select class="input input_type_select" id="prefecture" th:name="${fields['f063'].name}" th:with="default=${#maps.containsKey(inputs, 'f063') ? inputs['f063'] : #strings.toString(siteClient.record[63]?.id)}">
+                                    <option value="" th:text="${fields['f063'].unselectedLabel}" th:selected="${default == null}">Select option</option>
+                                    <option th:each="option : ${fields['f063'].options}" th:value="${option.id}" th:text="${option.label}" th:selected="${default == #strings.toString(option.id)}">Item</option>
+                                </select>
+                            </label>
+                            <span class="error" th:if="${errors['f063'] != null}" th:text="${errors['f063'].message}">Error message</span>
+                        </div>
+                        <!--/* 市区町村(city) */-->
+                        <div class="input-item form-section__item">
+                            <sp:input-field name="f012"></sp:input-field>
+                            <label for="city" class="label label_required">
+                                <span class="label__text">市区町村</span>
+                                <input id="city" class="input" type="text" th:name="${fields['f012'].name}" placeholder="例：横浜市中区" th:value="${#maps.containsKey(inputs, 'f012') ? inputs['f012'] : siteClient.record[12]}">
+                            </label>
+                            <span class="error" th:text="${errors['f012']?.message}">Error message</span>
+                        </div>
+                        <!--/* 丁番地(street) */-->
+                        <div class="input-item form-section__item">
+                            <sp:input-field name="f013"></sp:input-field>
+                            <label for="street" class="label label_required">
+                                <span class="label__text">丁番地</span>
+                                <input id="street" class="input" type="text" th:name="${fields['f013'].name}" placeholder="例：尾上町6-87-1" th:value="${#maps.containsKey(inputs, 'f013') ? inputs['f013'] : siteClient.record[13]}">
+                            </label>
+                            <span class="error" th:text="${errors['f013']?.message}">Error message</span>
+                        </div>
+                        <!--/* 建物名部屋番号(apartment) */-->
+                        <div class="input-item form-section__item">
+                            <sp:input-field name="f014"></sp:input-field>
+                            <label for="apartment" class="label label_required">
+                                <span class="label__text">丁番地</span>
+                                <input id="apartment" class="input" type="text" th:name="${fields['f014'].name}" placeholder="例：ダイムラービル" th:value="${#maps.containsKey(inputs, 'f014') ? inputs['f014'] : siteClient.record[14]}" th:if="${fields['f014'].control == 'text'}">
+                            </label>
+                            <span class="error" th:text="${errors['f014']?.message}">Error message</span>
+                        </div>
+                    </section>
+                </div>
+                <div class="form__footer">
+                    <button type="submit" name="action" value="next" class="button button_width_full">確認する</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <main class="main main_form">
+        <div class="form form_padding_top form_padding">
+            <div class="form__content">
+                <section class="complete-section">
+                    <h3 class="complete-section__header">基本情報</h3>
+                    <div class="complete-section__item">
+                        <span class="complete-section__field">氏名</span>
+                        <span class="complete-section__value" th:text="|${values['f04']} ${values['f05']}|">Example</span>
+                    </div>
+                    <div class="complete-section__item">
+                        <span class="complete-section__field">氏名（ふりがな）</span>
+                        <span class="complete-section__value" th:text="|${values['f06']} ${values['f07']}|">Example</span>
+                    </div>
+                    <div class="complete-section__item">
+                        <span class="complete-section__field">生年月日</span>
+                        <span class="complete-section__value" th:text="${values['f030']?.format('uuuu/MM/dd')}">Example</span>
+                    </div>
+                    <div class="complete-section__item">
+                        <span class="complete-section__field">電話番号</span>
+                        <span class="complete-section__value" th:text="${values['f08']?.nationalNumber}">Example</span>
+                    </div>
+                    <div class="complete-section__item">
+                        <span class="complete-section__field">携帯電話</span>
+                        <span class="complete-section__value" th:text="${values['f09']?.nationalNumber}">Example</span>
+                    </div>
+                    <div class="complete-section__item">
+                        <span class="complete-section__field">郵便番号</span>
+                        <span class="complete-section__value" th:text="|〒${values['f010']}|">Example</span>
+                    </div>
+                    <div class="complete-section__item">
+                        <span class="complete-section__field">住所</span>
+                        <span class="complete-section__value" th:text="|${values['f063']?.label}${values['f012']}${values['f013']}${values['f014']}|">Example</span>
+                    </div>
+                </section>
+            </div>
+            <div class="form__footer form__footer_padding_bottom">
+                <div class="form__btn-wrapper">
+                    <button type="submit" name="action" value="next" class="button button_type_line button_width_full button_flex_1">戻る</button>
+                    <button type="submit" name="action" value="next" class="button button_width_full button_flex_1">
+                        登録して次へ進む
+                        <span class="material-symbols-outlined">arrow_forward_ios</span>
+                    </button>
+                </div>
             </div>
         </div>
-    </header>
-
-    <!--
-    <header class="header header_admin">
-        <div class="main-header">
-            <a href="/" class="main-header__brand">
-                <img src="images/logo.png" alt="logo" class="main-header__logo">
-            </a>
-        </div>
-        <div class="sub-header">
-            <a href="/" class="sub-header__brand">
-                <img src="images/logo.png" alt="logo" class="sub-header__logo">
-            </a>
-        </div>
-    </header>
-    -->
-
-    <main style="min-height: 100vh;"></main>
+    </main>
 
     <footer class="footer">
         <div class="footer__content">
-            <section class="footer__item">
-                <h3 class="footer__item-header">運営会社</h3>
+            <section class="footer__section">
+                <h3 class="footer__section-header">運営会社</h3>
                 <div class="footer__list footer__list_dl">
                     <dl class="footer__dl">
                         <dt>会社名：</dt>
@@ -271,14 +310,14 @@
                         <dd>不動産特定共同事業許可 第一号業者 ○○県知事 第〇号</dd>
                     </dl>
                 </div>
-                <div class="footer__item-description">
+                <div class="footer__section-description">
                     <p class="footer__description">※弊社のクラウドファンディングは電子取引業務を行います。</p>
                     <p class="footer__description">※サイトに表示される「利回り」とは、予想利回りであり確定したものではありません。</p>
                     <p class="footer__description">※利回り及び元金の保証は出資法の制限により行っておりません。</p>
                 </div>
             </section>
-            <section class="footer__item">
-                <h3 class="footer__item-header">サイトマップ</h3>
+            <section class="footer__section">
+                <h3 class="footer__section-header">サイトマップ</h3>
                 <ul class="footer__list footer__list_ul">
                     <li><a class="footer__link" href="">ホーム</a></li>
                     <li><a class="footer__link" href="">ファンド</a></li>
@@ -291,8 +330,8 @@
                     <li><a class="footer__link" href="">お問い合わせ</a></li>
                 </ul>
             </section>
-            <section class="footer__item">
-                <h3 class="footer__item-header">法的表示</h3>
+            <section class="footer__section">
+                <h3 class="footer__section-header">法的表示</h3>
                 <ul class="footer__list footer__list_ul">
                     <li><a class="footer__link" href="">個人情報保護方針</a></li>
                     <li><a class="footer__link" href="">反社会的勢力排除条項</a></li>
