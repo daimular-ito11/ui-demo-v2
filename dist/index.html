@@ -10,289 +10,90 @@
 </head>
 
 <body>
-    <!-- auth header -->
-    <header class="header header_auth">
+    <div class="sub-header sub-header_type_border">
+        <a href="/" class="sub-header__brand">
+            <img src="/_media/img/logo.svg" alt="logo" class="sub-header__logo">
+        </a>
+    </div>
+    <header class="header header_step">
         <div class="main-header">
-            <a href="/" class="main-header__brand">
-                <img src="images/logo.png" alt="logo" class="main-header__logo">
+            <a href="/" class="main-header__brand main-header__brand_left">
+                <img src="/_media/img/logo.svg" alt="logo" class="main-header__logo">
             </a>
-            <ul class="main-header__link-list main-header__link-list_icon">
-                <li class="main-header__link-item main-header__link-item_active">
-                    <a href="" class="link-icon link-icon_col">
-                        <span class="material-symbols-outlined link-icon__icon">home</span>
-                        <span class="link-icon__text">ホーム</span>
-                    </a>
-                </li>
-                <li class="main-header__link-item">
-                    <a href="" class="link-icon link-icon_col">
-                        <span class="material-symbols-outlined link-icon__icon">apartment</span>
-                        <span class="link-icon__text">ファンド</span>
-                    </a>
-                </li>
-                <li class="main-header__link-item">
-                    <a href="" class="link-icon link-icon_col">
-                        <span class="material-symbols-outlined link-icon__icon">pending_actions</span>
-                        <span class="link-icon__text">出資履歴</span>
-                    </a>
-                </li>
-                <li class="main-header__link-item">
-                    <a href="" class="link-icon link-icon_col">
-                        <span class="material-symbols-outlined link-icon__icon">payments</span>
-                        <span class="link-icon__text">配当履歴</span>
-                    </a>
-                </li>
-                <li class="main-header__link-item">
-                    <a href="" class="link-icon link-icon_col">
-                        <span class="material-symbols-outlined link-icon__icon">menu</span>
-                        <span class="link-icon__text">メニュー</span>
-                    </a>
-                </li>
-            </ul>
-            <a class="main-header__auth">
-                john smith
-            </a>
-        </div>
-        <div class="sub-header sub-header_type_menu">
-            <a href="/" class="sub-header__brand">
-                <img src="images/logo.png" alt="logo" class="sub-header__logo">
-            </a>
-            <button class="sub-header__toggler" data-role="drawer" data-target="#js-header-drawer"></button>
-            <div class="sub-header__drawer drawer" id="js-header-drawer" data-role="drawer" data-target="#js-header-drawer">
-                <div class="drawer__dialog drawer__dialog_header">
-                    <div class="drawer__header">
-                        <a href="http://localhost:5173/" class="drawer__brand">
-                            <img src="images/logo.png" alt="logo" class="sub-header__logo">
-                        </a>
-                    </div>
-                    <div class="drawer__content">
-                        <ul class="sub-header__btn-list">
-                            <li class="drop-down" id="js-sub_head_1">
-                                <button type="button" class="drop-down__btn" data-role="drop-down" data-target="#js-sub_head_1">
-                                    ファンド一覧
-                                </button>
-                                <div class="drop-down__content">
-                                    <ul class="drop-down__list">
-                                        <li class="drop-down__list-item"><a href="">ファンド</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="drop-down" id="js-sub_head_2">
-                                <button type="button" class="drop-down__btn" data-role="drop-down" data-target="#js-sub_head_2">
-                                    お知らせ
-                                </button>
-                                <div class="drop-down__content">
-                                    <ul class="drop-down__list">
-                                        <li class="drop-down__list-item"><a href="">お知らせ</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="drawer__footer">
-                        <span class="sub-header__user">example@example.com</span>
-                        <button class="button button_width_full button_size_sm" data-role="modal" data-target="#js-logout-modal">
-                            ログアウト
-                        </button>
+            <div class="main-header__step">
+                <div class="step-circle__outer step-circle__outer_step-4">
+                    <div class="step-circle__inner">
+                        <div class="step-circle__text"><span class="step-circle__text_current">4</span>/4</div>
                     </div>
                 </div>
+                <h1 class="main-header__text">承諾事項</h1>
             </div>
+
         </div>
         <div class="sub-header">
             <button class="sub-header__back"></button>
-            <!-- <h1 class="sub-header__text">Top Page</h1> -->
-            <h1 class="sub-header__text">タイトル</h1>
+            <h1 class="sub-header__text">本会員登録</h1>
         </div>
-    </header>
-
-    <div class="modal" id="js-logout-modal" data-target="#js-logout-modal" data-role="modal">
-        <div class="modal__dialog">
-            <div class="modal__content">
-                <button class="modal__close" data-target="#js-logout-modal" data-role="modal"></button>
-                <div class="modal__title">ログアウト確認</div>
-                <div>ログアウトしますか？</div>
-                <div class="modal__btn-wrap">
-                    <a class="button button_width_full">ログアウトする</a>
-                    <a class="button button_type_no-line button_width_full">キャンセル</a>
+        <div class="sub-header sub-header_type_step">
+            <div class="sub-header__step">
+                <div class="step-circle__outer step-circle__outer_step-3">
+                    <div class="step-circle__inner">
+                        <div class="step-circle__text"><span class="step-circle__text_current">3</span>/4</div>
+                    </div>
                 </div>
+                <h1 class="sub-header__text">承諾事項</h1>
             </div>
         </div>
-    </div>
-
-    <main class="main main_gray_phone">
-        <h2 class="main__header">会員情報</h2>
-        <div class="main__content main__content_user-info">
-            <section class="user-info__section">
-                <div class="user-info__header">
-                    <h3 class="user-info__header-text">基本情報</h3>
-                    <!-- <a href="" class="user-info__link">変更</a> -->
-                </div>
-                <div class="user-info__content">
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">氏名フリガナ</span>
-                            <span class="user-info__value" th:text="|${siteClient.record[6]} ${siteClient.record[7]}|">みょうじ なまえ</span>
-                        </div>
+    </header>
+    <main class="main main_form main_gray">
+        <div class="form form_padding_top">
+            <div class="form__content">
+                <section class="form-section">
+                    <!--/* 個人情報保護方針(privacypolicy) */-->
+                    <div class="input-item form-section__item">
+                        <sp:input-field name="f025"></sp:input-field>
+                        <span class="label label_required">
+                            <span class="label__text">個人情報保護方針</span>
+                        </span>
+                        <label class="label_type_checkbox label_required" for="privacypolicy">
+                            <input type="checkbox" class="input input_type_checkbox" required value="1" id="privacypolicy" th:name="${fields['f025'].name}" th:checked="${inputs['f025'] == #strings.toString(1)}">
+                            <span>承諾</span>
+                        </label>
+                        <span class="error" th:if="${errors['f025'] != null}" th:text="${errors['f025']?.message}">Error message</span>
+                        <a th:href="${pages['p043993']?.path} ?: '/404'" behavior="internalRedirect" class="link link_margin_start link_reference">個人情報保護方針について</a>
                     </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">生年月日</span>
-                            <span class="user-info__value" th:text="|${siteClient.record[30]?.year}年${siteClient.record[30]?.month}月${siteClient.record[30]?.day}日|">2000年01月01日</span>
-                        </div>
+                    <!--/* 反社会的勢力に該当しない(noantisocial) */-->
+                    <div class="input-item form-section__item">
+                        <sp:input-field name="f024"></sp:input-field>
+                        <span class="label label_required">
+                            <span class="label__text">反社会的勢力に該当しないことへの承諾</span>
+                        </span>
+                        <label class="label_type_checkbox label_required" for="noantisocial">
+                            <input type="checkbox" class="input input_type_checkbox" required value="1" id="noantisocial" th:name="${fields['f024'].name}" th:checked="${inputs['f024'] == #strings.toString(1)}">
+                            <span>承諾</span>
+                        </label>
+                        <span class="error" th:if="${errors['f024'] != null}" th:text="${errors['f024']?.message}">Error message</span>
+                        <a th:href="${pages['p043994']?.path} ?: '/404'" behavior="internalRedirect" class="link link_margin_start link_reference">反社会的勢力排除条項について</a>
                     </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">メールアドレス</span>
-                            <span class="user-info__value" th:text="${siteClient.record[2]}">spiral@example.com</span>
-                        </div>
+                    <!--/* 電子交付(edelivery) */-->
+                    <div class="input-item form-section__item">
+                        <sp:input-field name="f027"></sp:input-field>
+                        <span class="label label_required">
+                            <span class="label__text">電子交付の承諾</span>
+                        </span>
+                        <label class="label_type_checkbox label_required" for="edelivery">
+                            <input type="checkbox" class="input input_type_checkbox" required value="1" id="edelivery" th:name="${fields['f027'].name}" th:checked="${inputs['f027'] == #strings.toString(1)}">
+                            <span>承諾</span>
+                        </label>
+                        <span class="error" th:if="${errors['f027'] != null}" th:text="${errors['f027']?.message}">Error message</span>
+                        <a th:href="${pages['p043995']?.path} ?: '/404'" behavior="internalRedirect" class="link link_margin_start link_reference">重要書類の電子交付に関する承諾について</a>
                     </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">電話番号</span>
-                            <span class="user-info__value" th:text="${siteClient.record[8]}">+81 03-1234-5678</span>
-                        </div>
-                        <a class="user-info__link" th:href="${pages['p042446']?.path ?:'/404'}">メールアドレス変更</a>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">パスワード</span>
-                            <span class="user-info__value" th:text="${#strings.repeat('*', siteClient.record[3] == null ? 8 : 16)}">****************</span>
-                        </div>
-                        <a class="user-info__link" th:href="${pages['p042447']?.path ?:'/404'}">電話番号変更</a>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">住所</span>
-                            <span class="user-info__value" th:text="|&#12306; ${siteClient.record[10]}|">Example</span>
-                            <span class="user-info__value" th:text="|${siteClient.record[63]?.label}${siteClient.record[12]}${siteClient.record[12]}${siteClient.record[13]}${siteClient.record[14]}|">Item</span>
-                        </div>
-                        <a class="user-info__link" th:href="${pages['p042080']?.path ?:'/404'}">パスワード再設定</a>
-                    </div>
-                </div>
-            </section>
-            <section class="user-info__section">
-                <div class="user-info__header">
-                    <h3 class="user-info__header-text">配当先口座情報</h3>
-                    <a class="user-info__link" th:href="${pages['p042078']?.path ?:'/404'}">口座情報変更</a>
-                </div>
-                <div class="user-info__content">
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">金融機関名</span>
-                            <span class="user-info__value" th:text="${siteClient.record[72]}">Example</span>
-                        </div>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">金融機関コード</span>
-                            <span class="user-info__value" th:text="${siteClient.record[73]}">Example</span>
-                        </div>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">支店名</span>
-                            <span class="user-info__value" th:text="${siteClient.record[74]}">Example</span>
-                        </div>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">支店番号</span>
-                            <span class="user-info__value" th:text="${siteClient.record[76]}">Example</span>
-                        </div>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">口座種別</span>
-                            <span class="user-info__value" th:text="${siteClient.record[77]?.label}">Item</span>
-                        </div>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">口座番号</span>
-                            <span class="user-info__value" th:text="${siteClient.record[78]}">Example</span>
-                        </div>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">口座名義</span>
-                            <span class="user-info__value" th:text="${siteClient.record[20]}">Example</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="user-info__section">
-                <div class="user-info__header">
-                    <h3 class="user-info__header-text">アンケート</h3>
-                    <a th:if="${siteClient.record[70] != null}" class="user-info__link" th:href="|${pages['p047386']?.path ?: '/404'}?${siteClient.record[70].linkParam}|">アンケート変更</a>
-                </div>
-                <div class="user-info__content">
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">勤務先</span>
-                            <span class="user-info__value" th:text="${siteClient.record[70] != null} ? (${siteClient.record[70][4]} ?: '--')">Example</span>
-                        </div>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">年収</span>
-                            <span class="user-info__value" th:text="${siteClient.record[70] != null} ? (${siteClient.record[70][2]}+'万円' ?: '--')">12345</span>
-                        </div>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">主な収入源</span>
-                            <span class="user-info__value" th:text="${siteClient.record[70] != null} ? (${siteClient.record[70][5]?.label} ?: '--')">Item</span>
-                        </div>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">金融資産</span>
-                            <span class="user-info__value" th:text="${siteClient.record[70] != null} ? (${siteClient.record[70][3]}+'万円' ?: '--')">12345</span>
-                        </div>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">投資資金の性格</span>
-                            <span class="user-info__value" th:text="${siteClient.record[70] != null} ? (${siteClient.record[70][6]?.label} ?: '--')">Item</span>
-                        </div>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">不動産投資への興味</span>
-                            <span class="user-info__value" th:text="${siteClient.record[70] != null} ? (${siteClient.record[70][7]?.label} ?: '--')">Item</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="user-info__section">
-                <div class="user-info__header">
-                    <h3 class="user-info__header-text">承諾事項</h3>
-                    <a class="user-info__link" th:href="${pages['p042078']?.path ?:'/404'}">口座情報変更</a>
-                </div>
-                <div class="user-info__content">
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">電磁的交付の承諾</span>
-                            <span class="user-info__value" th:text="${siteClient.record[27]?.label}">Item</span>
-                            <span class="user-info__value" th:text="|${siteClient.record[28]?.year}年${siteClient.record[28]?.month}月${siteClient.record[28]?.day}日|">Example</span>
-                        </div>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">反社会的勢力でないことの確認</span>
-                            <span class="user-info__value" th:text="${siteClient.record[24]?.label}">Item</span>
-                        </div>
-                    </div>
-                    <div class="user-info__item">
-                        <div class="user-info__item-content">
-                            <span class="user-info__label">個人情報保護規定の承諾</span>
-                            <span class="user-info__value" th:text="${siteClient.record[25]?.label}">Item</span>
-                            <span class="user-info__value" th:text="|${siteClient.record[26].year}年${siteClient.record[26].month}月${siteClient.record[26].day}日|">Example</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
+            <div class="form__footer form__footer_padding_bottom form__footer_padding_x">
+                <button type="submit" name="action" value="next" class="button button_width_full">確認する</button>
+            </div>
         </div>
-
     </main>
 
     <footer class="footer">
