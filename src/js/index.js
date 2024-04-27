@@ -5,3 +5,5 @@ import './modal';
 import './input';
 import './pdf';
 import './api/post_code';
+import "fslightbox";
+
