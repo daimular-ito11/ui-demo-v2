@@ -56,7 +56,7 @@ async function ZIPADRESSsearchStart() {
     if (ZIPADRESSsearchValue.length === 7) {
         const result = await ZIPADRESSfetchData();
         if (result.error) {
-            ZIPADRESSerror = result.data;
+            ZIPADRESSerrorValue = result.data;
             ZIPADRESSdisplayerror();
             return;
         }
