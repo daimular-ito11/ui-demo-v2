@@ -14,7 +14,7 @@
     <header class="header header_auth">
         <div class="main-header">
             <a href="/" class="main-header__brand">
-                <img src="images/logo.png" alt="logo" class="main-header__logo">
+                <img width="100" height="100" src="images/logo.png" alt="logo" class="main-header__logo">
             </a>
             <ul class="main-header__link-list main-header__link-list_icon">
                 <li class="main-header__link-item main-header__link-item_active">
@@ -54,14 +54,14 @@
         </div>
         <div class="sub-header sub-header_type_menu">
             <a href="/" class="sub-header__brand">
-                <img src="images/logo.png" alt="logo" class="sub-header__logo">
+                <img width="100" height="100" src="images/logo.png" alt="logo" class="sub-header__logo">
             </a>
             <button class="sub-header__toggler" data-role="drawer" data-target="#js-header-drawer"></button>
             <div class="sub-header__drawer drawer" id="js-header-drawer" data-role="drawer" data-target="#js-header-drawer">
                 <div class="drawer__dialog drawer__dialog_header">
                     <div class="drawer__header">
                         <a href="http://localhost:5173/" class="drawer__brand">
-                            <img src="images/logo.png" alt="logo" class="sub-header__logo">
+                            <img width="100" height="100" src="images/logo.png" alt="logo" class="sub-header__logo">
                         </a>
                     </div>
                     <div class="drawer__content">
@@ -119,214 +119,221 @@
     </div>
 
     <main class="main">
-        <div class="main__header main__header_fund-list">
-            <h1 class="main__header-text">ファンド一覧</h1>
-            <div class="pagination-select">
-                <span class="pagination-select__start-index" th:text="${pagination.startIndex}">1</span> - <span th:text="${pagination.endIndex}" class="pagination-select__end-index">6</span> /
-                <span th:text="${recordList.totalRecordCount}" class="pagination-select__total">211</span>
-                <select class="pagination-select__select">
-                    <option>----</option>
-                    <option value="20" th:selected="${pagination.currentPageSize == 20}" th:attr="data-link=${pagination.getLinkWithPageSize(20)}">20件</option>
-                    <option value="50" th:selected="${pagination.currentPageSize == 50}" th:attr="data-link=${pagination.getLinkWithPageSize(50)}">50件</option>
-                </select>
-            </div>
-        </div>
-        <div class="fund-list">
-            <article id="fund-1">
-                <a href="" class="fund-card">
-                    <!-- /* card left */ -->
-                    <div class="fund-card__left">
-                        <img src="images/fund-1.jpg" alt="fund image" width="100" height="100" class="fund-card__img">
-                        <div class="fund-card__tag">
-                            <div class="fund-card__tag-item">
-                                <span class="fund-card__tag-label">予定利回り (年利)</span>
-                                <span class="fund-card__tag-value fund-card__tag-value_rate">4.5</span>
-                            </div>
-                            <div class="fund-card__tag-item">
-                                <span class="fund-card__tag-label">応募締め切り</span>
-                                <span class="fund-card__tag-value fund-card__tag-value_date">
-                                    <span class="fund-card__tag-value_year">2025</span> 01/23 19:00
-                                </span>
-                            </div>
-                            <div class="fund-card__tag-item">
-                                <span class="fund-card__tag-label">運用予定日数</span>
-                                <span class="fund-card__tag-value fund-card__tag-value_days">999</span>
+        <div class="main__header">ファンド詳細</div>
+        <div class="fund-detail">
+            <div class="section-wrapper">
+                <section class="thumbnail-section">
+                    <img width="100" height="100" src="images/villa.jpg" alt="thumbnail" class="thumbnail-section__img">
+
+                    <div class="thumbnail-section__fund-text">
+                        <div class="thumbnail-section__fund-label">
+                            <div class="fund-label">
+                                <span class="fund-label__status fund-label__status_id_1"></span>
+                                <span class="fund-label__type fund-label__type_id_2"></span>
                             </div>
                         </div>
-                        <div class="fund-card__dividend">
-                            <div class="fund-card__dividend-item">
-                                <div class="fund-card__dividend-info">
-                                    <div class="invest-info">
-                                        <span class="invest-info__label">現在の応募総額</span>
-                                        <span class="invest-info__value invest-info__value_price">58,234,569</span>
+                        <h2 class="thumbnail-section__fund-title">013 プールヴィラ済井出</h2>
+                    </div>
+                </section>
+
+                <div class="toggle-section__list">
+                    <button type="button" data-target="#js-intro" data-role="toggle-section" class="toggle-section__list-button">
+                        ファンド紹介
+                    </button>
+                    <button type="button" data-target="#js-info" data-role="toggle-section" class="toggle-section__list-button toggle-section__list-button_active">
+                        ファンド情報
+                    </button>
+                    <button type="button" data-target="#js-schedule" data-role="toggle-section" class="toggle-section__list-button">
+                        スケジュール
+                    </button>
+                </div>
+
+                <div class="toggle-section__wrapper">
+                    <div class="toggle-section__item" id="js-intro">
+                        <section class="fund-content">
+                            <h3 class="fund-content__head">
+                                沖縄リゾートエリア開発シリーズ 第二弾 済井出（すむいで）
+                            </h3>
+                            <p class="fund-content__content">
+                                沖縄県北部（名護市・今帰仁村エリア）にて巨大テーマパークの構想はかねてより公表されておりましたが、
+                                2023/11/27、テーマパークの名称「JUNGLIA(ジャングリア)」が公開されました。
+                                2025年のオープンを目標にしていると発表されています。
+                                「JUNGLIA(ジャングリア)」計画はUSJの再建を手がけた森岡 毅 氏による発案で、
+                                新たな沖縄の観光スポットとして、国内外からの観光客増加が見込まれます。
+                            </p>
+                            <div class="fund-content__img-wrapper">
+                                <img width="100" height="100" src="images/content-1.jpg" alt="image name" class="fund-content__img">
+                                <img width="100" height="100" src="images/content-2.jpg" alt="image name" class="fund-content__img">
+                            </div>
+                        </section>
+
+                        <section class="fund-content">
+                            <h3 class="fund-content__head">
+                                沖縄リゾートエリア開発シリーズ 第二弾 済井出（すむいで）
+                            </h3>
+                            <p class="fund-content__content">
+                                沖縄県北部（名護市・今帰仁村エリア）にて巨大テーマパークの構想はかねてより公表されておりましたが、
+                                2023/11/27、テーマパークの名称「JUNGLIA(ジャングリア)」が公開されました。
+                                2025年のオープンを目標にしていると発表されています。
+                                「JUNGLIA(ジャングリア)」計画はUSJの再建を手がけた森岡 毅 氏による発案で、
+                                新たな沖縄の観光スポットとして、国内外からの観光客増加が見込まれます。
+                            </p>
+                            <div class="fund-content__img-wrapper">
+                                <img width="100" height="100" src="images/content-1.jpg" alt="image name" class="fund-content__img">
+                                <img width="100" height="100" src="images/content-2.jpg" alt="image name" class="fund-content__img">
+                                <img width="100" height="100" src="images/content-3.jpg" alt="image name" class="fund-content__img">
+                                <img width="100" height="100" src="images/content-4.jpg" alt="image name" class="fund-content__img">
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="toggle-section__item toggle-section__item_show" id="js-info">
+                        <div class="fund-info">
+                            <section class="fund-info__overview">
+                                <dl class="fund-info__overview-dl">
+                                    <dt class="fund-info__overview-dt fund-info__overview-dt_yeild">
+                                        予定利回り
+                                    </dt>
+                                    <dd class="fund-info__overview-dd">
+                                        <strong>4.5</strong>%（年利）
+                                    </dd>
+                                    <dt class="fund-info__overview-dt fund-info__overview-dt_period">
+                                        運用予定日数
+                                    </dt>
+                                    <dd class="fund-info__overview-dd">
+                                        <strong>365</strong>日間
+                                    </dd>
+                                    <dt class="fund-info__overview-dt fund-info__overview-dt_closing">
+                                        応募締切日時
+                                    </dt>
+                                    <dd class="fund-info__overview-dd">
+                                        <strong>2024</strong>年
+                                        <strong>12</strong>月
+                                        <strong>10</strong>日
+                                        <strong>19:00</strong>まで
+                                    </dd>
+                                    <dt class="fund-info__overview-dt fund-info__overview-dt_total">
+                                        運用総額
+                                    </dt>
+                                    <dd class="fund-info__overview-dd">
+                                        <span>150,000,000</span> 円
+                                    </dd>
+                                </dl>
+
+                                <div class="invest-current">
+                                    <div class="invest-current__text">
+                                        <span>現在の応募総額</span>
+                                        <span class="invest-current__text-value">
+                                            <b>58,234,569</b>円
+                                        </span>
                                     </div>
-                                    <div class="invest-info">
-                                        <span class="invest-info__label">募集総額</span>
-                                        <span class="invest-info__value invest-info__value_price">100,000,000</span>
-                                    </div>
-                                </div>
-                                <div class="fund-card__dividend-bar">
                                     <div class="invest-ratio">
                                         <div class="invest-ratio__max-bar">
                                             <div class="invest-ratio__value-bar" style="width: 58%;"></div>
                                         </div>
                                     </div>
-                                    <span class="invest-ratio__text">58</span>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /* card right */ -->
-                    <div class="fund-card__right">
-                        <div class="fund-card__head">
-                            <div class="fund-label">
-                                <span class="fund-label__status fund-label__status_id_null"></span>
-                                <span class="fund-label__type fund-label__type_id_null"></span>
-                            </div>
-                            <div class="fund-card__title">013 プールヴィラ済井出</div>
-                        </div>
-                        <dl class="fund-card__body">
-                            <dt>運用総額</dt>
-                            <dd class="fund-card__dd fund-card__dd_price format_price">
-                                100000000
-                            </dd>
-                            <dt>抽選予定日</dt>
-                            <dd class="format_date">
-                                2024/04/06
-                            </dd>
-                            <dt>キャンセル待ち抽選予定日</dt>
-                            <dd class="format_date">
-                                2024/04/06
-                            </dd>
-                            <dt>運用予定期間</dt>
-                            <dd>
-                                <span class="format_date format_date_start">2024/04/06</span><br>
-                                <span class="format_date format_date_end">2024/04/06</span>
-                            </dd>
-                            <dt>償還予定日</dt>
-                            <dd class="format_date">
-                                2024/04/06
-                            </dd>
-                        </dl>
-                    </div>
-                </a>
-            </article>
-            <article id="fund-2">
-                <a href="" class="fund-card">
-                    <div class="fund-card__left">
-                        <div class="fund-card__img fund-card__img_null"></div>
-                        <div class="fund-card__tag">
-                            <div class="fund-card__tag-item">
-                                <span class="fund-card__tag-label">予定利回り</span>
-                                <span class="fund-card__tag-value fund-card__tag-value_rate">4.5</span>
-                            </div>
-                            <div class="fund-card__tag-item">
-                                <span class="fund-card__tag-label">応募締め切り</span>
-                                <span class="fund-card__tag-value fund-card__tag-value_date">
-                                    <span class="fund-card__tag-value_year">2025</span> 01/23 19:00
-                                </span>
-                            </div>
-                            <div class="fund-card__tag-item">
-                                <span class="fund-card__tag-label">運用予定日数</span>
-                                <span class="fund-card__tag-value fund-card__tag-value_days">999</span>
-                            </div>
-                        </div>
-                        <div class="fund-card__dividend">
-                            <div class="fund-card__dividend-item">
-                                <div class="fund-card__dividend-info">
-                                    <div class="invest-info">
-                                        <span class="invest-info__label">現在の応募総額</span>
-                                        <span class="invest-info__value invest-info__value_price">120,000,000</span>
-                                    </div>
-                                    <div class="invest-info">
-                                        <span class="invest-info__label">募集総額</span>
-                                        <span class="invest-info__value format_price">100,000,000</span>
+                                    <div class="invest-current__text invest-current__text_sub">
+                                        <span>募集総額<b>100,000,000</b>円</span>
+                                        <span class="invest-current__text-value">
+                                            <b>58</b>%
+                                        </span>
                                     </div>
                                 </div>
-                                <div class="fund-card__dividend-bar">
-                                    <div class="invest-ratio">
-                                        <div class="invest-ratio__max-bar">
-                                            <div class="invest-ratio__value-bar invest-ratio__value-bar_over" style="width: 100%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="invest-ratio__text">120</span>
+                            </section>
+
+                            <section class="fund-info__item">
+                                <h3 class="fund-info__item-head">
+                                    出資情報
+                                </h3>
+                                <div class="fund-info__item-content"></div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <section class="toggle-section__item" id="js-schedule">
+                        schedule
+                    </section>
+                </div>
+            </div>
+
+            <div class="application__wrapper">
+                <div class="application">
+                    <h2 class="application__head">投資申し込み</h2>
+                    <p class="application__description">
+                        【注意事項】<br>
+                        今回の募集方式は<strong>「抽選方式」</strong>です。<br>
+                        投資申込後、募集終了日に抽選を行い、当選者にのみ「不動産特定共同事業契約書」を発行しますので、 ご確認のうえ、ご承諾ください。<br>
+                        その後、メールにて入金先のご案内を致します。
+                    </p>
+                    <div class="application__expire">
+                        振込期日：投資申込後 <strong>3</strong>日以内
+                    </div>
+                    <hr>
+                    <div class="application__form">
+                        <form action="" class="application__form">
+                            <label for="investment">
+                                応募可能額&nbsp;
+                                <strong>50</strong>万円
+                                <div class="input-group input-group__flex_end">
+                                    <input type="text" id="investment" class="input input-group__full-input">
+                                    <span>万円</span>
                                 </div>
-
-                            </div>
-                        </div>
+                            </label>
+                            <p class="application__form-description">
+                                ※小規模不動産特定共同事業法により、同時にお客様からお預かりできる投資額の上限が100万円です（応募中含む）。
+                            </p>
+                            <button class="button button__width_full">投資を申し込む</button>
+                        </form>
                     </div>
-                    <div class="fund-card__right">
-                        <div class="fund-card__head">
-                            <div class="fund-label">
-                                <span class="fund-label__status fund-label__status_id_1"></span>
-                                <span class="fund-label__type fund-label__type_id_1"></span>
-                            </div>
-                            <div class="fund-card__title">013 プールヴィラ済井出</div>
-                        </div>
-                        <dl class="fund-card__body">
-                            <dt>運用総額</dt>
-                            <dd class="fund-card__dd fund-card__dd_price format_price">
-                                100000000
-                            </dd>
-                            <dt>抽選予定日</dt>
-                            <dd class="format_date">
-                                2024/04/06
-                            </dd>
-                            <dt>キャンセル待ち抽選予定日</dt>
-                            <dd class="format_date">
-                                2024/04/06
-                            </dd>
-                            <dt>運用予定期間</dt>
-                            <dd>
-                                <span class="format_date format_date_start">2024/04/06</span><br>
-                                <span class="format_date format_date_end">2024/04/06</span>
-                            </dd>
-                            <dt>償還予定日</dt>
-                            <dd class="format_date">
-                                2024/04/06
-                            </dd>
-                        </dl>
-                    </div>
-                </a>
-            </article>
-        </div>
-
-        <!-- <div class="fund-list">
-            <div class="fund-list__no-fund">ファンドがありません。</div>
-        </div> -->
-
-        <div class="main__footer main__footer_fund-list">
-            <div class="sp-record-list-parts sp-record-list-pagination">
-                <div class="sp-record-list-pagination-center">
-                    <ul class="sp-page-navs" th:with="pageNavItemSize = 5" th:if="${recordList.totalRecordCount != 0}">
-                        <li class="sp-page-nav-item" th:if="!${pagination.isFirstPage}">
-                            <a th:href="${pagination.firstPageLink}">&lt;&lt;</a>
-                        </li>
-                        <li class="sp-page-nav-item" th:if="!${pagination.isFirstPage}">
-                            <a th:href="${pagination.prevPageLink}">&lt;</a>
-                        </li>
-                        <li class="sp-page-nav-item" th:each="item : ${pagination.getPrevPageNavItems(pageNavItemSize)}">
-                            <a th:text="${item.pageNum}" th:href="${item.link}">1</a>
-                        </li>
-                        <li class="sp-page-nav-item sp-page-nav-current">
-                            <span th:text="${pagination.currentPageNum}">2</span>
-                        </li>
-                        <li class="sp-page-nav-item" th:each="item : ${pagination.getNextPageNavItems(pageNavItemSize)}">
-                            <a th:text="${item.pageNum}" th:href="${item.link}">3</a>
-                        </li>
-                        <li class="sp-page-nav-more" th:if="${pagination.showEllipsis}">...</li>
-                        <li class="sp-page-nav-item" th:if="!${pagination.isLastPage}">
-                            <a th:href="${pagination.nextPageLink}">&gt;</a>
-                        </li>
-                        <li class="sp-page-nav-item" th:if="!${pagination.isLastPage} and !${recordList.recordCountLimitExceeded}">
-                            <a th:href="${pagination.lastPageLink}">&gt;&gt;</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
     </main>
+
+    <div class="bottom-modal__open-btn">
+        <button type="button" class="button button_width_full" data-role="modal" data-target="#js-bottom-modal">出資する</button>
+    </div>
+
+    <div class="modal__bottom modal" id="js-bottom-modal" data-target="#js-bottom-modal" data-role="modal">
+        <div class="modal__dialog modal__dialog_bottom">
+            <div class="modal__content application__wrapper application__wrapper_sub">
+                <button type="button" data-target="#js-bottom-modal" data-role="modal" class="modal__close-button">
+                </button>
+                <div class="application">
+                    <h2 class="application__head">投資申し込み</h2>
+                    <div class="application__form">
+                        <form action="" class="application__form">
+                            <label for="investment">
+                                <div class="input-group input-group_flex_end">
+                                    <div class="input-group_text_strech">
+                                        <span>応募可能額&nbsp;</span>
+                                        <span><strong>50</strong>万円</span>
+                                    </div>
+                                    <input type="text" id="investment" class="input input-group_full-input">
+                                    <span>万円</span>
+                                </div>
+                            </label>
+                            <p class="application__form-description">
+                                ※小規模不動産特定共同事業法により、同時にお客様からお預かりできる投資額の上限が100万円です（応募中含む）。
+                            </p>
+                            <button class="button button_width_full">投資を申し込む</button>
+                        </form>
+                    </div>
+                    <hr>
+                    <div class="application__expire">
+                        振込期日：投資申込後 <strong>3</strong>日以内
+                    </div>
+                    <p class="application__description">
+                        【注意事項】<br>
+                        今回の募集方式は<strong>「抽選方式」</strong>です。<br>
+                        投資申込後、募集終了日に抽選を行い、当選者にのみ「不動産特定共同事業契約書」を発行しますので、 ご確認のうえ、ご承諾ください。<br>
+                        その後、メールにて入金先のご案内を致します。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer__content">
