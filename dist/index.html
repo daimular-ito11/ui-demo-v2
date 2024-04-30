@@ -119,7 +119,18 @@
     </div>
 
     <main class="main">
-        <h1 class="main__header main__header_fund-list">ファンド一覧</h1>
+        <div class="main__header main__header_fund-list">
+            <h1 class="main__header-text">ファンド一覧</h1>
+            <div class="pagination-select">
+                <span class="pagination-select__start-index" th:text="${pagination.startIndex}">1</span> - <span th:text="${pagination.endIndex}" class="pagination-select__end-index">6</span> /
+                <span th:text="${recordList.totalRecordCount}" class="pagination-select__total">211</span>
+                <select class="pagination-select__select">
+                    <option>----</option>
+                    <option value="20" th:selected="${pagination.currentPageSize == 20}" th:attr="data-link=${pagination.getLinkWithPageSize(20)}">20件</option>
+                    <option value="50" th:selected="${pagination.currentPageSize == 50}" th:attr="data-link=${pagination.getLinkWithPageSize(50)}">50件</option>
+                </select>
+            </div>
+        </div>
         <div class="fund-list">
             <article class="fund-card">
                 <!-- /* card left */ -->
@@ -277,6 +288,36 @@
                     </dl>
                 </div>
             </article>
+        </div>
+        <div class="main__footer main__footer_fund-list">
+            <div class="sp-record-list-parts sp-record-list-pagination">
+                <div class="sp-record-list-pagination-center">
+                    <ul class="sp-page-navs" th:with="pageNavItemSize = 5" th:if="${recordList.totalRecordCount != 0}">
+                        <li class="sp-page-nav-item" th:if="!${pagination.isFirstPage}">
+                            <a th:href="${pagination.firstPageLink}">&lt;&lt;</a>
+                        </li>
+                        <li class="sp-page-nav-item" th:if="!${pagination.isFirstPage}">
+                            <a th:href="${pagination.prevPageLink}">&lt;</a>
+                        </li>
+                        <li class="sp-page-nav-item" th:each="item : ${pagination.getPrevPageNavItems(pageNavItemSize)}">
+                            <a th:text="${item.pageNum}" th:href="${item.link}">1</a>
+                        </li>
+                        <li class="sp-page-nav-item sp-page-nav-current">
+                            <span th:text="${pagination.currentPageNum}">2</span>
+                        </li>
+                        <li class="sp-page-nav-item" th:each="item : ${pagination.getNextPageNavItems(pageNavItemSize)}">
+                            <a th:text="${item.pageNum}" th:href="${item.link}">3</a>
+                        </li>
+                        <li class="sp-page-nav-more" th:if="${pagination.showEllipsis}">...</li>
+                        <li class="sp-page-nav-item" th:if="!${pagination.isLastPage}">
+                            <a th:href="${pagination.nextPageLink}">&gt;</a>
+                        </li>
+                        <li class="sp-page-nav-item" th:if="!${pagination.isLastPage} and !${recordList.recordCountLimitExceeded}">
+                            <a th:href="${pagination.lastPageLink}">&gt;&gt;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
 
