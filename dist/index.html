@@ -124,7 +124,8 @@
                 <div class="main__header">ファンド詳細</div>
                 <section class="fund-detail__thumbnail">
                     <div class="thumbnail__img-wrapper">
-                        <img width="100" height="100" src="images/villa.jpg" alt="thumbnail" class="thumbnail__img">
+                        <!-- <img width="100" height="100" src="images/villa.jpg" alt="thumbnail" class="thumbnail__img"> -->
+                        <div class="thumbnail__img img_null"></div>
                     </div>
 
                     <div class="thumbnail__head">
@@ -137,19 +138,19 @@
                 </section>
 
                 <section class="fund-detail__toggle-btn">
-                    <button type="button" data-target="#js-intro" data-role="toggle-section" class="toggle-section__list-button">
+                    <button type="button" data-target="#js-intro" data-role="toggle-section" class="toggle-section__list-button toggle-section__list-button_active">
                         ファンド紹介
                     </button>
                     <button type="button" data-target="#js-info" data-role="toggle-section" class="toggle-section__list-button">
                         ファンド情報
                     </button>
-                    <button type="button" data-target="#js-schedule" data-role="toggle-section" class="toggle-section__list-button toggle-section__list-button_active">
+                    <button type="button" data-target="#js-schedule" data-role="toggle-section" class="toggle-section__list-button">
                         スケジュール
                     </button>
                 </section>
 
                 <section class="fund-detail__toggle-content">
-                    <div class="toggle-section__item" id="js-intro">
+                    <div class="toggle-section__item toggle-section__item_show" id="js-intro">
                         <section class="fund-content">
                             <h3 class="fund-content__head fund-detail__head">
                                 沖縄リゾートエリア開発シリーズ 第二弾 済井出（すむいで）
@@ -469,7 +470,7 @@
                         </div>
                     </div>
 
-                    <section class="toggle-section__item toggle-section__item_show" id="js-schedule">
+                    <section class="toggle-section__item" id="js-schedule">
                         <div class="fund-schedule">
                             <div class="schedule__item">
                                 <div class="schedule__content">
@@ -598,7 +599,7 @@
         <button type="button" class="button" data-role="modal" data-target="#js-bottom-modal">出資する</button>
     </div>
 
-    <div class="modal_bottom modal modal_open" id="js-bottom-modal" data-target="#js-bottom-modal" data-role="modal">
+    <div class="modal_bottom modal" id="js-bottom-modal" data-target="#js-bottom-modal" data-role="modal">
         <div class="modal__dialog">
             <div class="modal__content">
                 <button type="button" data-target="#js-bottom-modal" data-role="modal" class="modal__close">
