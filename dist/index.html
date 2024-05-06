@@ -10,213 +10,75 @@
 </head>
 
 <body>
-    <!--  -->
-    <!-- <sp:block name="fcb08611"></sp:block> -->
-    <sp:block name="fcb010710"></sp:block>
-
-    <main class="main main_gray_phone">
-        <h2 class="main__header">会員情報</h2>
-        <div class="main__content main__content_user-info">
-            <!-- <th:block th:if="${siteClient.record[29]?.id} == 2"> -->
-            <section class="info">
-                <div class="info__header">
-                    <h3 class="info__header-text">基本情報</h3>
+    <main class="main">
+        <h2 class="main__header">会員情報詳細</h2>
+        <div class="main__content customer-info">
+            <div class="customer-info__toggle-btn">
+                <div class="toggle-btn">
+                    <button class="toggle-btn__item toggle-btn__item_active">会員情報</button>
+                    <button class="toggle-btn__item">投資申込履歴</button>
                 </div>
-                <div class="info__section">
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">氏名</span>
-                            <span class="info__value" th:text="|${siteClient.record[4]} ${siteClient.record[5]}|">みょうじ なまえ</span>
-                        </div>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">氏名フリガナ</span>
-                            <span class="info__value" th:text="|${siteClient.record[6]} ${siteClient.record[7]}|">みょうじ なまえ</span>
-                        </div>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">生年月日</span>
-                            <span class="info__value" th:text="|${siteClient.record[30]?.year}年${siteClient.record[30]?.month}月${siteClient.record[30]?.day}日|">2000年01月01日</span>
-                        </div>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">メールアドレス</span>
-                            <span class="info__value" th:text="${siteClient.record[2]}">spiral@example.com</span>
-                        </div>
-                        <a class="info__link" th:href="${pages['p042446']?.path ?:'/404'}">変更</a>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">電話番号</span>
-                            <span class="info__value" th:text="${siteClient.record[8] ?: '--'}">--</span>
-                            <span class="info__label">携帯番号</span>
-                            <span class="info__value" th:text="${siteClient.record[9] ?: '--'}">--</span>
-                        </div>
-                        <a class="info__link" th:href="${pages['p042447']?.path ?:'/404'}">変更</a>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">パスワード</span>
-                            <span class="info__value" th:text="${#strings.repeat('*', siteClient.record[3] == null ? 8 : 16)}">****************</span>
-                        </div>
-                        <a class="info__link" th:href="${pages['p042080']?.path ?:'/404'}">変更</a>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">住所</span>
-                            <span class="info__value" th:text="|&#12306; ${siteClient.record[10]}|">Example</span>
-                            <span class="info__value" th:text="|${siteClient.record[63]?.label}${siteClient.record[12]}${siteClient.record[12]}${siteClient.record[13]}${siteClient.record[14]}|">Item</span>
-                        </div>
-                        <a class="info__link" th:href="${pages['p047668']?.path ?:'/404'}">変更</a>
-                    </div>
+            </div>
+            <section class="customer-info__item customer-info__item_flex">
+                <div class="info__tag">
+                    <span class="info__tag-label">だいむら たろう</span>
+                    <div class="info__tag-value">大村 太郎</div>
+                </div>
+                <div class="info__tag">
+                    <span class="info__tag-label">会員ステータス</span>
+                    <div class="tag tag_customer_1">本会員</div>
+                </div>
+                <div class="info__tag">
+                    <span class="info__tag-label">本人確認状況</span>
+                    <div class="tag tag_ekyc_1">完了</div>
                 </div>
             </section>
-            <section class="info">
-                <div class="info__header">
-                    <h3 class="info__header-text">配当先口座情報</h3>
-                    <a class="info__link" th:href="${pages['p042078']?.path ?:'/404'}">変更</a>
-                </div>
-                <div class="info__section">
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">金融機関名</span>
-                            <span class="info__value" th:text="${siteClient.record[72]}">Example</span>
+            <div class="customer-info__item-group">
+                <section class="info customer-info__item">
+                    <div class="info__header">
+                        <h3 class="info__header-text">基本情報</h3>
+                        <button class="button button_type_icon button_type_line">
+                            <span class="material-symbols-outlined">edit</span>
+                            編集
+                        </button>
+                    </div>
+                    <div class="info__section">
+                        <div class="info__item">
+                            <div class="info__content">
+                                <span class="info__label">氏名</span>
+                                <span class="info__value" th:text="|${siteClient.record[4]} ${siteClient.record[5]}|">みょうじ なまえ</span>
+                            </div>
+                        </div>
+                        <div class="input-item">
+                            <div class="input-group input-group_width_full input-group_flex_full">
+                                <label for="first-name" class="label label_required">
+                                    <span class="label__text">姓</span>
+                                    <input type="text" id="first-name" class="input">
+                                </label>
+                                <label for="last-name" class="label label_required">
+                                    <span class="label__text">名</span>
+                                    <input type="text" id="last-name" class="input">
+                                </label>
+                            </div>
                         </div>
                     </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">金融機関コード</span>
-                            <span class="info__value" th:text="${siteClient.record[73]}">Example</span>
+                </section>
+                <section class="info customer-info__item">
+                    <div class="info__header">
+                        <h3 class="info__header-text">基本情報</h3>
+                    </div>
+                    <div class="info__section">
+                        <div class="info__item">
+                            <div class="info__content">
+                                <span class="info__label">氏名</span>
+                                <span class="info__value" th:text="|${siteClient.record[4]} ${siteClient.record[5]}|">みょうじ なまえ</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">支店名</span>
-                            <span class="info__value" th:text="${siteClient.record[74]}">Example</span>
-                        </div>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">支店番号</span>
-                            <span class="info__value" th:text="${siteClient.record[76]}">Example</span>
-                        </div>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">口座種別</span>
-                            <span class="info__value" th:text="${siteClient.record[77]?.label}">Item</span>
-                        </div>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">口座番号</span>
-                            <span class="info__value" th:text="${siteClient.record[78]}">Example</span>
-                        </div>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">口座名義</span>
-                            <span class="info__value" th:text="${siteClient.record[20]}">Example</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="info">
-                <div class="info__header">
-                    <h3 class="info__header-text">アンケート</h3>
-                    <a th:if="${siteClient.record[70] != null}" class="info__link" th:href="|${pages['p047386']?.path ?: '/404'}?${siteClient.record[70].linkParam}|">変更</a>
-                </div>
-                <div class="info__section">
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">勤務先</span>
-                            <span class="info__value" th:text="${siteClient.record[70] != null} ? (${siteClient.record[70][4]} ?: '--')">Example</span>
-                        </div>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">年収</span>
-                            <span class="info__value" th:text="${siteClient.record[70] != null} ? (${siteClient.record[70][2]}+'万円' ?: '--')">12345</span>
-                        </div>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">主な収入源</span>
-                            <span class="info__value" th:text="${siteClient.record[70] != null} ? (${siteClient.record[70][5]?.label} ?: '--')">Item</span>
-                        </div>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">金融資産</span>
-                            <span class="info__value" th:text="${siteClient.record[70] != null} ? (${siteClient.record[70][3]}+'万円' ?: '--')">12345</span>
-                        </div>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">投資資金の性格</span>
-                            <span class="info__value" th:text="${siteClient.record[70] != null} ? (${siteClient.record[70][6]?.label} ?: '--')">Item</span>
-                        </div>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">不動産投資への興味</span>
-                            <span class="info__value" th:text="${siteClient.record[70] != null} ? (${siteClient.record[70][7]?.label} ?: '--')">Item</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="info">
-                <div class="info__header">
-                    <h3 class="info__header-text">承諾事項</h3>
-                </div>
-                <div class="info__section">
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">電磁的交付の承諾</span>
-                            <span class="info__value" th:text="${siteClient.record[27]?.label}">Item</span>
-                            <span class="info__value" th:text="|${siteClient.record[28]?.year}年${siteClient.record[28]?.month}月${siteClient.record[28]?.day}日|">Example</span>
-                        </div>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">反社会的勢力でないことの確認</span>
-                            <span class="info__value" th:text="${siteClient.record[24]?.label}">Item</span>
-                        </div>
-                    </div>
-                    <div class="info__item">
-                        <div class="info__content">
-                            <span class="info__label">個人情報保護規定の承諾</span>
-                            <span class="info__value" th:text="${siteClient.record[25]?.label}">Item</span>
-                            <span class="info__value" th:text="|${siteClient.record[26]?.year}年${siteClient.record[26]?.month}月${siteClient.record[26]?.day}日|">Example</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- </th:block> -->
-            <section class="info">
-                <div class="info__header">
-                    <h3 class="info__header-text">退会手続き</h3>
-                </div>
-                <div class="info__section">
-                    <div class="info__content">
-                        <p class="description">
-                            退会を希望の方は以下のボタンより手続きを行ってください。
-                        </p>
-                    </div>
-                    <a th:href="${pages['p042448']?.path ?:'/404'}" class="link link_float_right">退会手続きをする</a>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
     </main>
-
-    <!--/* 退会 */-->
-    <a th:href="${pages['p042448']?.path ?:'/404'}">退会</a>
-
-    <sp:block name="fcb08617"></sp:block>
-
 </body>
 
 </html>
