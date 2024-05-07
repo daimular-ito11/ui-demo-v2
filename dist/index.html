@@ -10,77 +10,125 @@
 </head>
 
 <body>
-    <input type="text" data-role="zengin-input">
+    <style>
+        .mail_verify_text {
+            text-align: center;
+        }
 
-    <main class="main">
-        <h2 class="main__header">会員情報詳細</h2>
-        <div class="main__content customer-info">
-            <div class="customer-info__toggle-btn">
-                <div class="toggle-btn">
-                    <button class="toggle-btn__item toggle-btn__item_size_sm toggle-btn__item_active">会員情報</button>
-                    <button class="toggle-btn__item toggle-btn__item_size_sm">投資申込履歴</button>
-                </div>
-            </div>
-            <section class="customer-info__item customer-info__item_flex">
-                <div class="info__tag">
-                    <span class="info__tag-label">だいむら たろう</span>
-                    <div class="info__tag-value">大村 太郎</div>
-                </div>
-                <div class="info__tag">
-                    <span class="info__tag-label">会員ステータス</span>
-                    <div class="tag tag_customer_1">本会員</div>
-                </div>
-                <div class="info__tag">
-                    <span class="info__tag-label">本人確認状況</span>
-                    <div class="tag tag_ekyc_1">完了</div>
-                </div>
-            </section>
-            <div class="customer-info__item-group">
-                <section class="info customer-info__item">
-                    <div class="info__header">
-                        <h3 class="info__header-text">基本情報</h3>
-                        <button class="button button_type_icon button_type_line">
-                            <span class="material-symbols-outlined">edit</span>
-                            編集
-                        </button>
+        /*小柳テスト用*/
+        .mail_verify_false {
+            text-align: center;
+            color: red;
+        }
+
+        .mail_send_container {
+            margin: 100px auto;
+            display: none;
+        }
+
+        .title {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .user_mail {
+            text-align: center;
+        }
+
+        .notes {
+            font-size: 12px;
+            color: #7A7A7A;
+        }
+    </style>
+    <!-- form header -->
+    <header class="header header_form">
+        <div class="main-header">
+            <a href="/" class="main-header__brand">
+                <img src="images/logo.png" alt="logo" class="main-header__logo">
+            </a>
+        </div>
+        <div class="sub-header">
+            <a href="/" class="sub-header__brand">
+                <img src="images/logo.png" alt="logo" class="sub-header__logo">
+            </a>
+        </div>
+        <div class="sub-header">
+            <button class="sub-header__back"></button>
+            <h1 class="sub-header__text">認証コードの入力</h1>
+        </div>
+    </header>
+
+    <main class="main main_width_half main_height_full">
+        <h1 class="main__header main__header_center">
+            認証コードの入力
+        </h1>
+        <div>
+            <div class="form form_flex_between form_min-height">
+                <div class="form__content">
+                    <div class="description">
+                        メールに記載されている4桁の認証コードを入力してください。
                     </div>
-                    <div class="info__section">
-                        <div class="info__item">
-                            <div class="info__content">
-                                <span class="info__label">氏名</span>
-                                <span class="info__value" th:text="|${siteClient.record[4]} ${siteClient.record[5]}|">みょうじ なまえ</span>
-                            </div>
+                    <!--/* メール認証コード顧客入力(mail_verify_customer) */-->
+                    <div class="input-item">
+                        <sp:input-field name="f060"></sp:input-field>
+                        <label for="code" class="label label_required">
+                            <span class="label__text">認証コード</span>
+                            <input pattern="[0-9]{4}" type="text" id="code" th:name="${fields['f060'].name}" th:value="${#maps.containsKey(inputs, 'f060') ? inputs['f060'] : siteClient.record[60]}" placeholder="1234" class="input" required>
+                            <span class="surpport">4桁の認証コードを入力してください。</span>
+                        </label>
+                        <div id="mail_verify_false" class="error">
+                            <!-- test -->
+                            <p class="mail_verify_false" style="display: none;">
+                                認証コードが有効期限切れです。再度認証コードを再発行しなおしてください。
+                            </p>
+                            <p class="mail_verify_false" style="display: none;">
+                                メール認証に失敗しました。
+                            </p>
+                            <!-- test -->
                         </div>
-                        <div class="input-item">
-                            <div class="input-group input-group_width_full input-group_flex_full">
-                                <label for="first-name" class="label label_required">
-                                    <span class="label__text">姓</span>
-                                    <input type="text" id="first-name" class="input">
-                                </label>
-                                <label for="last-name" class="label label_required">
-                                    <span class="label__text">名</span>
-                                    <input type="text" id="last-name" class="input">
-                                </label>
-                            </div>
-                        </div>
                     </div>
-                </section>
-                <section class="info customer-info__item">
-                    <div class="info__header">
-                        <h3 class="info__header-text">基本情報</h3>
-                    </div>
-                    <div class="info__section">
-                        <div class="info__item">
-                            <div class="info__content">
-                                <span class="info__label">氏名</span>
-                                <span class="info__value" th:text="|${siteClient.record[4]} ${siteClient.record[5]}|">みょうじ なまえ</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                </div>
+                <div class="form__footer">
+                    <button type="submit" name="action" value="next" class="button button_width_full">送信する</button>
+                </div>
             </div>
         </div>
+
+        <div>
+            <!--/* メール認証コード顧客入力(mail_verify_customer) */-->
+            <sp:input-field name="f060"></sp:input-field>
+            <input type="hidden" class="sp-form-control" th:name="${fields['f060'].name}" th:value="${#maps.containsKey(inputs, 'f060') ? inputs['f060'] : siteClient.record[60]}" th:if="${fields['f060'].control == 'text'}">
+            <button class="button button_type_no-line button_width_full" type="submit" name="action" value="next">認証コード付きメールを再送信する</button>
+
+            <!--/* メール送信後DOM生成 */-->
+            <input type="hidden" id="temporary_email" th:value="${cp.result.value['temporaryMail']}">
+
+            <div class="mail_send_container">
+                <h4 class="title">認証メール送信完了</h4>
+                <div>
+                    <p>以下のメールアドレス宛に認証メールを送信しました。</p>
+                    <p class="user_mail">
+                    <div id="mail_verify_regeneration">
+                        <!-- test -->
+                        <p class="main_send_container" style="display: block;">
+                            <span>sample@sample.com</span>に認証付きコードを再送しました。
+                        </p>
+                        <!-- test -->
+                    </div>
+                    </p>
+                    <p>
+                        メール内のURLからメール認証を行ってください。
+                    </p>
+                    <p class="notes">
+                        メールが届かない場合は、BLITZ CFSのメールアドレス（blitz.cfsドメイン及び、blitz-cfs.jpドメイン）が受信拒否設定に含まれていないかご確認ください。
+                    </p>
+                </div>
+            </div>
+        </div>
+
     </main>
+
 </body>
 
 </html>
