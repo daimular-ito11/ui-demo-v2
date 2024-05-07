@@ -10,37 +10,6 @@
 </head>
 
 <body>
-    <style>
-        .mail_verify_text {
-            text-align: center;
-        }
-
-        /*小柳テスト用*/
-        .mail_verify_false {
-            text-align: center;
-            color: red;
-        }
-
-        .mail_send_container {
-            margin: 100px auto;
-            display: none;
-        }
-
-        .title {
-            font-size: 18px;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .user_mail {
-            text-align: center;
-        }
-
-        .notes {
-            font-size: 12px;
-            color: #7A7A7A;
-        }
-    </style>
     <!-- form header -->
     <header class="header header_form">
         <div class="main-header">
@@ -54,80 +23,41 @@
             </a>
         </div>
         <div class="sub-header">
-            <button class="sub-header__back"></button>
-            <h1 class="sub-header__text">認証コードの入力</h1>
+            <h1 class="sub-header__text">仮会員登録完了</h1>
         </div>
     </header>
 
-    <main class="main main_width_half main_height_full">
-        <h1 class="main__header main__header_center">
-            認証コードの入力
-        </h1>
-        <div>
-            <div class="form form_flex_between form_min-height">
-                <div class="form__content">
-                    <div class="description">
-                        メールに記載されている4桁の認証コードを入力してください。
-                    </div>
-                    <!--/* メール認証コード顧客入力(mail_verify_customer) */-->
-                    <div class="input-item">
-                        <sp:input-field name="f060"></sp:input-field>
-                        <label for="code" class="label label_required">
-                            <span class="label__text">認証コード</span>
-                            <input pattern="[0-9]{4}" type="text" id="code" th:name="${fields['f060'].name}" th:value="${#maps.containsKey(inputs, 'f060') ? inputs['f060'] : siteClient.record[60]}" placeholder="1234" class="input" required>
-                            <span class="surpport">4桁の認証コードを入力してください。</span>
-                        </label>
-                        <div id="mail_verify_false" class="error">
-                            <!-- test -->
-                            <p class="mail_verify_false" style="display: none;">
-                                認証コードが有効期限切れです。再度認証コードを再発行しなおしてください。
-                            </p>
-                            <p class="mail_verify_false" style="display: none;">
-                                メール認証に失敗しました。
-                            </p>
-                            <!-- test -->
-                        </div>
-                    </div>
-                </div>
-                <div class="form__footer">
-                    <button type="submit" name="action" value="next" class="button button_width_full">送信する</button>
-                </div>
-            </div>
+    <main class="main main_width_half" th:inline="none">
+        <h1 class="main__header main__header_center">仮会員登録完了</h1>
+        <div class="form from_mb_2">
+            <p class="description">
+                以下のメールアドレス宛に認証メールを送信しました。
+            </p>
+
+            <span class="sign-up__email" th:text="${record[2]}">spiral@example.com</span>
+
+            <p class="description">
+                <!-- 1時間以内にメール内のURLから本会員登録を行ってください。 -->
+                メール内のURLから本会員登録を行ってください。
+            </p>
+
+            <p class="description description_color_gray description_font_sm">
+                メールが届かない場合は、BLITZ.CFSのメールアドレス（blitz.cfsドメイン及び、blitz-cfs.jpドメイン）が受信拒否設定に含まれていないかご確認ください。
+            </p>
+
+            <p class="description description_color_gray description_font_sm">
+                メールアドレスを間違えた場合は、もう一度仮会員登録からやり直してください。
+            </p>
+
+            <a th:href="${pages['p042062']?.path ?:'/404'}" behavior="redirect" class="link link_text_end">仮会員登録からやり直す</a>
+
+            <p class="description description_color_gray description_font_sm">
+                メールアドレスに間違いがなく、もう一度認証メールを送信したい場合はマイページから実行してください。
+            </p>
+            <a th:href="${pages['p042077']?.path ?:'/404'}" behavior="redirect" class="link link_text_end">マイページに行く</a>
         </div>
-
-        <div>
-            <!--/* メール認証コード顧客入力(mail_verify_customer) */-->
-            <sp:input-field name="f060"></sp:input-field>
-            <input type="hidden" class="sp-form-control" th:name="${fields['f060'].name}" th:value="${#maps.containsKey(inputs, 'f060') ? inputs['f060'] : siteClient.record[60]}" th:if="${fields['f060'].control == 'text'}">
-            <button class="button button_type_no-line button_width_full" type="submit" name="action" value="next">認証コード付きメールを再送信する</button>
-
-            <!--/* メール送信後DOM生成 */-->
-            <input type="hidden" id="temporary_email" th:value="${cp.result.value['temporaryMail']}">
-
-            <div class="mail_send_container">
-                <h4 class="title">認証メール送信完了</h4>
-                <div>
-                    <p>以下のメールアドレス宛に認証メールを送信しました。</p>
-                    <p class="user_mail">
-                    <div id="mail_verify_regeneration">
-                        <!-- test -->
-                        <p class="main_send_container" style="display: block;">
-                            <span>sample@sample.com</span>に認証付きコードを再送しました。
-                        </p>
-                        <!-- test -->
-                    </div>
-                    </p>
-                    <p>
-                        メール内のURLからメール認証を行ってください。
-                    </p>
-                    <p class="notes">
-                        メールが届かない場合は、BLITZ CFSのメールアドレス（blitz.cfsドメイン及び、blitz-cfs.jpドメイン）が受信拒否設定に含まれていないかご確認ください。
-                    </p>
-                </div>
-            </div>
-        </div>
-
     </main>
+
 
 </body>
 
